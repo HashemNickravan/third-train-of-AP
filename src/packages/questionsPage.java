@@ -8,6 +8,7 @@ public class questionsPage {
         // Create and configure the panel
         JPanel panel = new JPanel();
         panel.setBounds(0, 0, 600, 600);
+        panel.add(Box.createRigidArea(new Dimension(int width, int height)));
         panel.setBackground(new Color(0xD3DC8F));
         panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS ));
 
