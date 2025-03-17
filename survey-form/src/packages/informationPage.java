@@ -1,6 +1,7 @@
 package packages;
 
 import javax.swing.*;
+import java.awt.Font;
 
 public class informationPage {
 
@@ -10,48 +11,54 @@ public class informationPage {
         panel.setBounds(0, 0, 600, 600);
         panel.setLayout(null);
 
+        // Define Arial font
+        Font arialFont = new Font("Arial", Font.PLAIN, 14);
+
         // Name Label and Text Field
-        JLabel nameLabel = new JLabel("اسم");
+        JLabel nameLabel = new JLabel("Name");
         nameLabel.setBounds(10, 10, 100, 20);
+        nameLabel.setFont(arialFont); // Apply Arial font
         JTextField nameField = new JTextField(15);
         nameField.setBounds(50, 10, 100, 20);
-        nameLabel.setFont(new Font("Arial", Font.PLAIN, 14));
-        nameField.setFont(new Font("Arial", Font.PLAIN, 14));
+        nameField.setFont(arialFont); // Apply Arial font
 
         // Age Label and Text Field
-        JLabel ageLabel = new JLabel("سن");
+        JLabel ageLabel = new JLabel("Age");
         ageLabel.setBounds(10, 50, 100, 20);
+        ageLabel.setFont(arialFont); // Apply Arial font
         JTextField ageField = new JTextField(15);
         ageField.setBounds(50, 50, 100, 20);
-        ageField.setFont(new Font("Arial", Font.PLAIN, 14));
-        ageLabel.setFont(new Font("Arial", Font.PLAIN, 14));
+        ageField.setFont(arialFont); // Apply Arial font
 
         // Email Label and Text Field
-        JLabel emailLabel = new JLabel("ایمیل");
+        JLabel emailLabel = new JLabel("Email");
         emailLabel.setBounds(10, 90, 100, 20);
+        emailLabel.setFont(arialFont); // Apply Arial font
         JTextField emailField = new JTextField(15);
         emailField.setBounds(50, 90, 100, 20);
-        emailLabel.setFont(new Font("Arial", Font.PLAIN, 14));
-        emailField.setFont(new Font("Arial", Font.PLAIN, 14));
-
+        emailField.setFont(arialFont); // Apply Arial font
 
         // Software Familiarity Level
-        JLabel levelLabel = new JLabel("سطح آشنایی با نرم افزارهای مشابه");
+        JLabel levelLabel = new JLabel("Level of familiarity with similar software");
         levelLabel.setBounds(10, 130, 250, 20);
-        levelLabel.setFont(new Font("Arial", Font.PLAIN, 14));
+        levelLabel.setFont(arialFont); // Apply Arial font
 
-        JRadioButton level1 = new JRadioButton("مبتدی");
+        // Radio Buttons
+        JRadioButton level1 = new JRadioButton("Beginner");
         level1.setBounds(10, 160, 100, 20);
-        level1.setFont(new Font("Arial", Font.PLAIN, 14));
-        JRadioButton level2 = new JRadioButton("متوسط");
+        level1.setFont(arialFont); // Apply Arial font
+
+        JRadioButton level2 = new JRadioButton("Intermediate");
         level2.setBounds(100, 160, 100, 20);
-        level2.setFont(new Font("Arial", Font.PLAIN, 14));
-        JRadioButton level3 = new JRadioButton("پیشرفته");
+        level2.setFont(arialFont); // Apply Arial font
+
+        JRadioButton level3 = new JRadioButton("Advanced");
         level3.setBounds(190, 160, 100, 20);
-        level3.setFont(new Font("Arial", Font.PLAIN, 14));
-        JRadioButton level4 = new JRadioButton("بدون آشنایی");
+        level3.setFont(arialFont); // Apply Arial font
+
+        JRadioButton level4 = new JRadioButton("No familiarity");
         level4.setBounds(280, 160, 150, 20);
-        level4.setFont(new Font("Arial", Font.PLAIN, 14));
+        level4.setFont(arialFont); // Apply Arial font
 
         // Group the radio buttons
         ButtonGroup group = new ButtonGroup();
@@ -61,9 +68,9 @@ public class informationPage {
         group.add(level4);
 
         // Next Page Button
-        JButton nextButton = new JButton("صفحه بعد");
+        JButton nextButton = new JButton("Next Page");
         nextButton.setBounds(10, 200, 100, 20);
-        nextButton.setFont(new Font("Arial", Font.PLAIN, 14));
+        nextButton.setFont(arialFont); // Apply Arial font
         nextButton.addActionListener(e -> {
             // Remove current panel and move to Page2
             frame.remove(panel);
