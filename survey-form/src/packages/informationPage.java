@@ -1,6 +1,7 @@
 package packages;
 
 import javax.swing.*;
+import java.awt.Font;
 
 public class informationPage {
 
@@ -10,36 +11,54 @@ public class informationPage {
         panel.setBounds(0, 0, 600, 600);
         panel.setLayout(null);
 
+        // Define Arial font
+        Font arialFont = new Font("Arial", Font.PLAIN, 14);
+
         // Name Label and Text Field
-        JLabel nameLabel = new JLabel("name");
+        JLabel nameLabel = new JLabel("Name");
         nameLabel.setBounds(10, 10, 100, 20);
+        nameLabel.setFont(arialFont); // Apply Arial font
         JTextField nameField = new JTextField(15);
         nameField.setBounds(50, 10, 100, 20);
+        nameField.setFont(arialFont); // Apply Arial font
 
         // Age Label and Text Field
-        JLabel ageLabel = new JLabel("age");
+        JLabel ageLabel = new JLabel("Age");
         ageLabel.setBounds(10, 50, 100, 20);
+        ageLabel.setFont(arialFont); // Apply Arial font
         JTextField ageField = new JTextField(15);
         ageField.setBounds(50, 50, 100, 20);
+        ageField.setFont(arialFont); // Apply Arial font
 
         // Email Label and Text Field
-        JLabel emailLabel = new JLabel("email");
+        JLabel emailLabel = new JLabel("Email");
         emailLabel.setBounds(10, 90, 100, 20);
+        emailLabel.setFont(arialFont); // Apply Arial font
         JTextField emailField = new JTextField(15);
         emailField.setBounds(50, 90, 100, 20);
+        emailField.setFont(arialFont); // Apply Arial font
 
         // Software Familiarity Level
         JLabel levelLabel = new JLabel("Level of familiarity with similar software");
         levelLabel.setBounds(10, 130, 250, 20);
+        levelLabel.setFont(arialFont); // Apply Arial font
 
-        JRadioButton level1 = new JRadioButton("beginner");
+        // Radio Buttons
+        JRadioButton level1 = new JRadioButton("Beginner");
         level1.setBounds(10, 160, 100, 20);
-        JRadioButton level2 = new JRadioButton("average");
+        level1.setFont(arialFont); // Apply Arial font
+
+        JRadioButton level2 = new JRadioButton("Intermediate");
         level2.setBounds(100, 160, 100, 20);
-        JRadioButton level3 = new JRadioButton("advanced");
+        level2.setFont(arialFont); // Apply Arial font
+
+        JRadioButton level3 = new JRadioButton("Advanced");
         level3.setBounds(190, 160, 100, 20);
-        JRadioButton level4 = new JRadioButton("without familiarity");
+        level3.setFont(arialFont); // Apply Arial font
+
+        JRadioButton level4 = new JRadioButton("No familiarity");
         level4.setBounds(280, 160, 150, 20);
+        level4.setFont(arialFont); // Apply Arial font
 
         // Group the radio buttons
         ButtonGroup group = new ButtonGroup();
@@ -49,8 +68,9 @@ public class informationPage {
         group.add(level4);
 
         // Next Page Button
-        JButton nextButton = new JButton("next page");
+        JButton nextButton = new JButton("Next Page");
         nextButton.setBounds(10, 200, 100, 20);
+        nextButton.setFont(arialFont); // Apply Arial font
         nextButton.addActionListener(e -> {
             // Remove current panel and move to Page2
             frame.remove(panel);
